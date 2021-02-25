@@ -14,13 +14,15 @@ Task 1a - Voting Age
 Do the following:   
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
-
    HINT: no function required
 */
+var votingAge='20';
 
+ if (votingAge >= 18){
+   console.log(true);
+ }
 
-
-/*
+/*c
 Task 1b - Values
 
 Do the following:   
@@ -30,6 +32,10 @@ Do the following:
 
    HINT: no function required
 */
+var itemOne=7;
+var itemTwo=9;
+
+console.log(itemOne===itemTwo+1);
 
 
 
@@ -46,7 +52,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var stringOne="1999";
 
+stringOne=1994;
+console.log(stringOne);
 
 
 /*
@@ -57,10 +66,13 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+function multiply(a,b){
+  return (a*b);
+}
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+
+
+
 
 
 
@@ -74,8 +86,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+
+function dogYears(age){
+    return(age*7);
 }
 
 
@@ -107,14 +120,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(age, weight){
+    if (age >1 && weight < 5) {
+    return weight*.05;
+    }
+    if (age >1 && weight <=10 && weight >6){
+      return weight*.04;
+    }
+    if (age >1 && weight <=15 && weight >11) {
+      return weight*.03;
+    }
+    if (age >1 && weight <=15) {
+    return weight*.02;
+    } 
+    if (age<1 && age<.34){
+    return weight*.1;
+    }
+    if(age<1 && age<.67){
+    return weight*.05;
+    }
+    if(age<1 && age<.85){
+    return weight*.04;
+    }
 
-
+    console.log(hungryDog);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
+//all if/else statements & math.random function*hint*
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Create a global variable that randomly generates the computer's choice
@@ -135,9 +167,21 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
-}
+    if (user===scissors && computer===paper) {
+    console.log("you win!");
+    }
+    if (user===paper && computer===scissors) {
+      console.log("you lose");
+    }
+    else{
+      console.log("it's a tie");
+    }
   
+    function makeSelection(game){
+      console.log(game)
+    }
+
+    
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -220,10 +264,9 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
+//function vowelCounter(/*add your code here*/) {
     /*add your code here*/
-}
-
+//}
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
