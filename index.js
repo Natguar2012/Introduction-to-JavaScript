@@ -167,7 +167,7 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    if (user===scissors && computer===paper) {
+    if (user===scissors && computer===paper ||  {
     console.log("you win!");
     }
     if (user===paper && computer===scissors) {
@@ -195,8 +195,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(miles, kilometers){
+    return numberOfMiles()
   }
 
 
@@ -245,7 +245,7 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
+function grade(){
   /*Your Code here */
   }
   
