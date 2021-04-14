@@ -18,6 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 18
+
+if(votingAge >= 18){
+  console.log(true);
+}
 
 
 /*
@@ -30,10 +35,15 @@ Do the following:
 
    HINT: no function required
 */
+let vOne = 1
 
+let vTwo = 2
 
+if(vTwo === 2){
+  vOne = 4
+}
 
-
+console.log(vOne);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,7 +56,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+let sVariable = "1999";
 
+sVariable = Number(sVariable);
+
+console.log(sVariable);
 
 
 /*
@@ -58,9 +72,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a, b) {
+  return a * b;
+}
+
+multiply(4, 7);
+
+
 
 
 
@@ -74,10 +92,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
-
+dogYears(26);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,27 +125,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age) {
-  if (age >= 1 && weight >=5){
-    return weight * 0.05;
-  }else if(age >=1 && weight >=6 && weight <= 10){
-    return weight * 0.04;
-  }else if(age >=1 && weight >11 && weight <=15){
-    return weight * 0.03;
+ function hungryDog(weight, age) {
+   if (age >= 1 && weight <=5){
+     return weight * 0.05;
+   }else if(age >=1 && weight >=6 && weight <= 10){
+     return weight * 0.04;
+   }else if(age >=1 && weight >11 && weight <=15){
+     return weight * 0.03;
     }else if(age >= 1 && weight > 15){
-      return weight * 0.02;
-    }else if(age < 1 && age >= 0.583){
-      return weight * 0.04;
-    }else if(age < 0.583 && age >=0.333){
-      return weight * 0.05;
-    }else if(age < 0.333){
-      return weight * 0.10;
-    }else{
-      return `please try again`;
-    }
-  }
+       return weight * 0.02;
+     }else if(age < 1 && age >= 0.583){
+       return weight * 0.04;
+     }else if(age < 0.583 && age >=0.333){
+       return weight * 0.05;
+     }else if(age < 0.333){
+       return weight * 0.10;
+     }else{
+       return `please try again`;
+     }
+   }
 
-console.log('task 3:', hungryDog(43, 4));
+ console.log('task 3:', hungryDog(43, 4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -156,15 +174,20 @@ if(computer <= 0.34){
   computer = 'paper'
 }else if (computer <= 0.67)
 computer ='scissors';
-}
+
 
 function game(user, computer){
     if(user === computer){
-      return
+      return `it's a tie`;
+    }else if(user === 'rock' && computer === 'scissors'){
+      return `you win!`
+    }else if(user === 'paper' && computer === 'rock'){
+      return `you win!`;
+    }else if(user === 'scissors' && computer === 'paper'){
+    }else{
+      return `you lose!`;
     }
 }
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -177,10 +200,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(KM){
+    return KM * 0.62
   }
-
+  
+  console.log('task 5a', feet(162));
 
 
 //Task 5b - Feet to CM
@@ -191,9 +215,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+return cm / 30.48;
   }
+
+  console.log('task 5b', feet(50));
  
 
 
@@ -207,7 +233,7 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(){
         /*add your code here*/
   }
 
